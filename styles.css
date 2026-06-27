@@ -557,11 +557,42 @@ h2 {
 }
 
 .reference-card {
+  display: flex;
+  flex-direction: column;
   min-height: 360px;
 }
 
+.reference-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reference-top b {
+  padding: 8px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  font-size: 12px;
+  line-height: 1;
+}
+
 .reference-card h3 {
+  position: relative;
+  z-index: 1;
   font-size: clamp(24px, 2.4vw, 31px);
+}
+
+.reference-meta {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px !important;
+  color: rgba(19, 15, 35, 0.82) !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
 }
 
 .reference-card strong {
@@ -572,6 +603,30 @@ h2 {
   color: var(--ink);
   font-size: 14px;
   line-height: 1.6;
+}
+
+.discover-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: max-content;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0 18px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.discover-link:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--ink);
 }
 
 .hot {
