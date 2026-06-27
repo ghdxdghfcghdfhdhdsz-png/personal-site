@@ -312,7 +312,9 @@ section {
 .section-grid,
 .signal-section,
 .vibe-section,
-.works-section,
+.ip-section,
+.reference-section,
+.operation-section,
 .contact-section {
   padding: 100px 0;
 }
@@ -388,14 +390,25 @@ h2 {
 }
 
 .signal-board,
-.work-grid {
+.ip-grid,
+.reference-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
+.signal-board,
+.ip-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.reference-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .signal-card,
-.work-card {
+.ip-card,
+.reference-card,
+.choice-stack article {
   min-height: 320px;
   padding: 24px;
   border: 3px solid var(--ink);
@@ -410,7 +423,9 @@ h2 {
 }
 
 .signal-card span,
-.work-card span {
+.ip-card span,
+.reference-card span,
+.choice-stack article span {
   display: inline-flex;
   width: max-content;
   max-width: 100%;
@@ -423,14 +438,19 @@ h2 {
 }
 
 .signal-card h3,
-.work-card h3 {
+.ip-card h3,
+.reference-card h3,
+.choice-stack article h3 {
   margin: 24px 0 12px;
   font-size: clamp(25px, 3vw, 36px);
   line-height: 1.08;
 }
 
 .signal-card p,
-.work-card p {
+.ip-card p,
+.reference-card p,
+.choice-stack article p,
+.operation-copy p {
   margin: 0;
   color: rgba(19, 15, 35, 0.72);
   font-size: 16px;
@@ -500,13 +520,32 @@ h2 {
   animation: pulseWidth 2.8s ease-in-out infinite;
 }
 
-.work-card {
+.ip-card,
+.reference-card,
+.choice-stack article {
   position: relative;
   background: rgba(255, 255, 255, 0.7);
   overflow: hidden;
 }
 
-.work-card::after {
+.ip-card {
+  min-height: 250px;
+}
+
+.ip-card:nth-child(3n + 1) {
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.ip-card:nth-child(3n + 2) {
+  background: rgba(22, 217, 255, 0.2);
+}
+
+.ip-card:nth-child(3n) {
+  background: rgba(183, 255, 42, 0.28);
+}
+
+.ip-card::after,
+.reference-card::after {
   content: "";
   position: absolute;
   right: -46px;
@@ -515,6 +554,77 @@ h2 {
   height: 140px;
   border: 24px solid rgba(123, 77, 255, 0.24);
   border-radius: 50%;
+}
+
+.reference-card {
+  min-height: 360px;
+}
+
+.reference-card h3 {
+  font-size: clamp(24px, 2.4vw, 31px);
+}
+
+.reference-card strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hot {
+  background: #ff8a2b;
+}
+
+.blue {
+  background: var(--cyan);
+}
+
+.green {
+  background: var(--lime);
+}
+
+.purple {
+  background: #bca7ff;
+}
+
+.operation-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.operation-copy {
+  position: sticky;
+  top: 120px;
+}
+
+.operation-copy p {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.choice-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.choice-stack article {
+  min-height: 190px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.choice-stack article:nth-child(2) {
+  background: rgba(255, 79, 184, 0.18);
+}
+
+.choice-stack article:nth-child(3) {
+  background: rgba(255, 138, 43, 0.22);
 }
 
 .contact-section {
@@ -597,6 +707,7 @@ h2 {
   .hero-section,
   .section-grid,
   .vibe-section,
+  .operation-section,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -615,8 +726,13 @@ h2 {
   }
 
   .signal-board,
-  .work-grid {
+  .ip-grid,
+  .reference-grid {
     grid-template-columns: 1fr;
+  }
+
+  .operation-copy {
+    position: static;
   }
 
   .fact-grid {
@@ -647,12 +763,13 @@ h2 {
   .site-nav {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 4px;
   }
 
   .site-nav a {
-    padding: 10px 6px;
+    padding: 10px 4px;
+    font-size: 12px;
     text-align: center;
   }
 
@@ -697,7 +814,9 @@ h2 {
   .section-grid,
   .signal-section,
   .vibe-section,
-  .works-section,
+  .ip-section,
+  .reference-section,
+  .operation-section,
   .contact-section {
     padding: 72px 0;
   }
@@ -716,8 +835,13 @@ h2 {
   }
 
   .signal-card,
-  .work-card {
+  .ip-card,
+  .reference-card {
     min-height: 260px;
+  }
+
+  .choice-stack article {
+    min-height: 190px;
   }
 
   .meter-row {
