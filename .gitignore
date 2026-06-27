@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+dist/
+.vercel/
+.netlify/
+wang-xinyi-personal-site.zip
+wang-xinyi-personal-site/

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>王鑫溢 | 个人主页</title>
+    <meta
+      name="description"
+      content="王鑫溢的个人主页，展示个人介绍、方向、作品和联系方式。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas class="noise-field" id="noise-field" aria-hidden="true"></canvas>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand-mark" href="#top" aria-label="回到顶部">
+          <span>W</span>
+          <span>王鑫溢</span>
+        </a>
+        <nav class="site-nav" aria-label="主要导航">
+          <a href="#about">关于</a>
+          <a href="#signal">标签</a>
+          <a href="#works">作品</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero-section" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Personal Website / Since 2026</p>
+            <h1 id="hero-title">
+              把生活过成
+              <span>高饱和频道</span>
+            </h1>
+            <p class="hero-lead">
+              嗨，我是王鑫溢。这里会放我的照片、故事、灵感、作品，以及一些正在发光的小野心。
+            </p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#works">看看我的作品</a>
+              <a class="ghost-action" href="#contact">找我聊聊</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="照片展示区域">
+            <div class="photo-frame">
+              <img src="./assets/wang-xinyi-photo.jpg" alt="王鑫溢在海边的个人照片" />
+              <div class="photo-glow"></div>
+            </div>
+            <div class="orbit orbit-one">ENTP?</div>
+            <div class="orbit orbit-two">VLOG</div>
+            <div class="orbit orbit-three">MOODBOARD</div>
+          </div>
+        </section>
+
+        <section class="ticker" aria-label="滚动关键词">
+          <div class="ticker-track">
+            <span>闪闪发光</span>
+            <span>长期主义</span>
+            <span>内容创作</span>
+            <span>审美在线</span>
+            <span>表达欲满格</span>
+            <span>行动派</span>
+            <span>闪闪发光</span>
+            <span>长期主义</span>
+            <span>内容创作</span>
+            <span>审美在线</span>
+            <span>表达欲满格</span>
+            <span>行动派</span>
+          </div>
+        </section>
+
+        <section class="section-grid about-section" id="about" aria-labelledby="about-title">
+          <div>
+            <p class="section-kicker">ABOUT ME</p>
+            <h2 id="about-title">一个不太安静的灵感收集器</h2>
+          </div>
+          <div class="about-panel">
+            <p>
+              我喜欢观察人与情绪，也喜欢把散落的想法变成能被看见的东西。这个主页会慢慢长出更多真实内容：
+              日常片段、个人经历、作品项目、旅行记录、社交媒体入口，还有我想长期经营的个人标签。
+            </p>
+            <div class="fact-grid">
+              <div>
+                <strong>01</strong>
+                <span>内容表达</span>
+              </div>
+              <div>
+                <strong>02</strong>
+                <span>视觉审美</span>
+              </div>
+              <div>
+                <strong>03</strong>
+                <span>自我探索</span>
+              </div>
+              <div>
+                <strong>04</strong>
+                <span>项目行动</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="signal-section" id="signal" aria-labelledby="signal-title">
+          <div class="section-heading">
+            <p class="section-kicker">SIGNALS</p>
+            <h2 id="signal-title">我的频道信号</h2>
+          </div>
+          <div class="signal-board">
+            <article class="signal-card electric">
+              <span>审美雷达</span>
+              <h3>对好看的东西很难假装冷静</h3>
+              <p>喜欢配色、排版、影像、空间和所有“哇，这个感觉对了”的瞬间。</p>
+            </article>
+            <article class="signal-card coral">
+              <span>内容人格</span>
+              <h3>把经历翻译成故事</h3>
+              <p>擅长从普通日常里抓亮点，让表达更有画面、更有人味。</p>
+            </article>
+            <article class="signal-card lime">
+              <span>行动能量</span>
+              <h3>先做出第一版再变厉害</h3>
+              <p>比起空想，我更相信迭代。先让事情动起来，灵感才会追上来。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="vibe-section" aria-labelledby="vibe-title">
+          <div class="vibe-copy">
+            <p class="section-kicker">VIBE CHECK</p>
+            <h2 id="vibe-title">一点点外放，一点点锋利，一点点松弛</h2>
+            <p>
+              这是一个可以继续升级的个人主页：后面能加照片墙、时间线、博客、作品详情、社交链接和暗黑模式。
+            </p>
+          </div>
+          <div class="meter-stack" aria-label="个人特质指数">
+            <div class="meter-row">
+              <span>好奇心</span>
+              <div><i style="width: 96%"></i></div>
+            </div>
+            <div class="meter-row">
+              <span>行动力</span>
+              <div><i style="width: 88%"></i></div>
+            </div>
+            <div class="meter-row">
+              <span>审美值</span>
+              <div><i style="width: 93%"></i></div>
+            </div>
+            <div class="meter-row">
+              <span>松弛感</span>
+              <div><i style="width: 79%"></i></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="works-section" id="works" aria-labelledby="works-title">
+          <div class="section-heading">
+            <p class="section-kicker">WORKS</p>
+            <h2 id="works-title">先占几个坑，等作品来发光</h2>
+          </div>
+          <div class="work-grid">
+            <article class="work-card">
+              <span>Project 01</span>
+              <h3>个人影像计划</h3>
+              <p>可以放旅行、写真、生活切片或视频合集。</p>
+            </article>
+            <article class="work-card">
+              <span>Project 02</span>
+              <h3>内容创作合集</h3>
+              <p>适合展示小红书、公众号、播客、社媒账号或文章。</p>
+            </article>
+            <article class="work-card">
+              <span>Project 03</span>
+              <h3>作品与项目</h3>
+              <p>后续可以接链接、详情页、GitHub 或作品集 PDF。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+          <div>
+            <p class="section-kicker">CONTACT</p>
+            <h2 id="contact-title">欢迎进入王鑫溢的朋友圈雷达范围</h2>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:1877540890@qq.com">1877540890@qq.com</a>
+            <a href="https://github.com/ghdxdghfcghdfhdhdsz-png" target="_blank" rel="noreferrer">
+              GitHub: ghdxdghfcghdfhdhdsz-png
+            </a>
+            <a
+              href="https://www.xiaohongshu.com/search_result?keyword=3850007662"
+              target="_blank"
+              rel="noreferrer"
+            >
+              小红书: 3850007662
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
