@@ -1,9 +1,19 @@
 const canvas = document.querySelector("#noise-field");
 const ctx = canvas.getContext("2d", { alpha: true });
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
 let width = 0;
 let height = 0;
 let particles = [];
+
+function resetScrollPosition() {
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+}
 
 function resizeCanvas() {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -48,5 +58,7 @@ function draw(time) {
 }
 
 resizeCanvas();
+resetScrollPosition();
 requestAnimationFrame(draw);
 window.addEventListener("resize", resizeCanvas);
+window.addEventListener("pageshow", resetScrollPosition);
